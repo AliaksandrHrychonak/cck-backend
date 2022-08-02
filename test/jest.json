@@ -12,8 +12,7 @@
   "coverageDirectory": "coverage",
   "collectCoverageFrom": [
       "./src/config/service/**",
-      "./src/database/service/**",
-      "./src/debugger/service/**"
+      "./src/database/service/**"  
   ],
   "coverageThreshold": {
     "global": {

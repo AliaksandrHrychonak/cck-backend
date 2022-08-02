@@ -2,7 +2,7 @@
   "name": "cck-backend",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Aliaksandr Grichenok",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -23,13 +23,19 @@
     "lint:src": "eslint --ext .ts,.tsx src/**/*.ts --no-error-on-unmatched-pattern",
     "lint:e2e": "eslint --ext .ts,.tsx e2e/**/*.ts --no-error-on-unmatched-pattern",
     "lint:integration": "eslint --ext .ts,.tsx integration/**/*.ts --no-error-on-unmatched-pattern",
-    "test": "yarn test:unit && yarn test:integration && yarn test:e2e",
+    "test": "npm run test:unit && npm run test:integration && npm run test:e2e",
     "test:unit": "jest --config test/jest.json --detectOpenHandles --passWithNoTests --forceExit",
     "test:e2e": "jest --config e2e/jest.json --detectOpenHandles --passWithNoTests --forceExit",
     "test:integration": "jest --config integration/jest.json --detectOpenHandles --passWithNoTests --forceExit",
     "prepare": "husky install",
     "deadcode": "ts-prune --project tsconfig.json | grep -v '(used in module)'",
-    "deadcode:count": "ts-prune --project tsconfig.json | grep -v '(used in module)' | wc -l"
+    "deadcode:count": "ts-prune --project tsconfig.json | grep -v '(used in module)' | wc -l",
+    "spell:test": "cspell lint --config cspell.json test/**/*.ts --color --gitignore --no-must-find-files --no-summary --no-progress || true",
+    "spell:src": "cspell lint --config cspell.json src/**/*.ts --color --gitignore --no-must-find-files --no-summary --no-progress || true",
+    "spell:e2e": "cspell lint --config cspell.json e2e/**/*.ts --color --gitignore --no-must-find-files --no-summary --no-progress || true",
+    "spell:integration": "cspell lint --config cspell.json integration/**/*.ts --color --gitignore --no-must-find-files --no-summary --no-progress || true",
+    "spell": "cspell lint --config cspell.json {src,test,e2e,integration}/**/*.ts prod/* readme.md tsconfig*.json docker* package.json nodemon.json license.md .github/* .husky/* --color --gitignore --no-must-find-files --no-summary --no-progress || true"
+  
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
