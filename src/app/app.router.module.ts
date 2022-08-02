@@ -1,7 +1,4 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { RouterModule } from '@nestjs/core';
-
-
 @Module({})
 export class AppRouterModule {
     static register(): DynamicModule {
