@@ -15,7 +15,6 @@ async function bootstrap() {
     const versioningPrefix: string = configService.get<string>(
         'app.versioning.prefix'
     );
-
     const logger = new Logger();
     process.env.NODE_ENV = env;
 
