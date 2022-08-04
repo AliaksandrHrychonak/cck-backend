@@ -8,6 +8,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { DATABASE_CONNECTION_NAME } from 'src/database/database.constant';
 import { DatabaseOptionsService } from 'src/database/service/database.options.service';
 import { DatabaseModule } from 'src/database/database.module';
+import { HelperModule } from 'src/helper/helper.module';
 
 
 @Module({
@@ -35,6 +36,7 @@ import { DatabaseModule } from 'src/database/database.module';
                 databaseOptionsService.createMongooseOptions(),
         }),
         DebuggerModule,
-    ],
+        HelperModule
+        ],
 })
 export class CoreModule {}

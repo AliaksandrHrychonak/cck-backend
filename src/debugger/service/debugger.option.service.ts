@@ -76,5 +76,5 @@ export class DebuggerOptionService {
             transports,
         };
         return loggerOptions;
-      }
+    }
 }
