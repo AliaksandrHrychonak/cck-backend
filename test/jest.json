@@ -11,7 +11,8 @@
   "collectCoverage": true,
   "coverageDirectory": "coverage",
   "collectCoverageFrom": [
-      "./src/config/service/**"
+      "./src/config/service/**",
+      "./src/pagination/service/**"
   ],
   "coverageThreshold": {
     "global": {
