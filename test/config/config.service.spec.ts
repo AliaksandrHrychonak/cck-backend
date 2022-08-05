@@ -18,6 +18,12 @@ describe('ConfigService', () => {
     });
 
     describe('get', () => {
+        it('should be called', async () => {
+            const test = jest.spyOn(configService, 'get');
+
+            configService.get('auth.env');
+            expect(test).toHaveBeenCalledWith('auth.env');
+        });
 
         it('should be success', async () => {
             const env = configService.get('app.env');

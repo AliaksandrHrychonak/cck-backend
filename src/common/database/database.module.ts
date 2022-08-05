@@ -6,4 +6,4 @@ import { DatabaseOptionsService } from './service/database.options.service';
     exports: [DatabaseOptionsService],
     imports: [],
 })
-export class DatabaseModule {}
+export class DatabaseOptionsModule {}

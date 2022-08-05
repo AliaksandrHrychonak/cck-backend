@@ -3,4 +3,5 @@
 
 yarn lint
 yarn find-deadcode
-yarn test
+yarn spell
+# yarn test

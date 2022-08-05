@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { LoggerOptions } from 'winston';
 import winston from 'winston';
-import { DEBUGGER_NAME } from '../debugger.constant';
 import DailyRotateFile from 'winston-daily-rotate-file';
+import { DEBUGGER_NAME } from '../debugger.constant';
 
 @Injectable()
 export class DebuggerOptionService {
@@ -64,6 +64,7 @@ export class DebuggerOptionService {
             })
         );
 
+        /* istanbul ignore next */
         if ((this.debug || this.logger) && this.env !== 'production') {
             transports.push(new winston.transports.Console());
         }
