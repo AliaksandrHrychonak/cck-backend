@@ -23,6 +23,7 @@ export class DatabaseOptionsService implements MongooseOptionsFactory {
         this.user = this.configService.get<string>('database.user');
         this.password = this.configService.get<string>('database.password');
         this.debug = this.configService.get<boolean>('database.debug');
+
         this.options = this.configService.get<string>('database.options')
             ? `?${this.configService.get<string>('database.options')}`
             : '';
@@ -44,8 +45,10 @@ export class DatabaseOptionsService implements MongooseOptionsFactory {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             serverSelectionTimeoutMS: 5000,
+            // useMongoClient: true
         };
 
+        /* istanbul ignore next */
         if (this.user && this.password) {
             mongooseOptions.auth = {
                 username: this.user,

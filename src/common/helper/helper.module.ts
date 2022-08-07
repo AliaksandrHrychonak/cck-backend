@@ -4,6 +4,7 @@ import { HelperDateService } from './service/helper.date.service';
 import { HelperGeoService } from './service/helper.geo.service';
 import { HelperNumberService } from './service/helper.number.service';
 import { HelperService } from './service/helper.service';
+import { HelperStringService } from './service/helper.string.service';
 
 @Global()
 @Module({
@@ -14,6 +15,7 @@ import { HelperService } from './service/helper.service';
         HelperDateService,
         HelperArrayService,
         HelperGeoService,
+        HelperStringService
     ],
     exports: [
         HelperService,
@@ -21,6 +23,7 @@ import { HelperService } from './service/helper.service';
         HelperDateService,
         HelperArrayService,
         HelperGeoService,
+        HelperStringService
     ],
     imports: [],
 })

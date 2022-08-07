@@ -41,17 +41,5 @@ describe('DatabaseOptionsService', () => {
                 options
             );
         });
-
-        it('should be success', async () => {
-            const options = databaseOptionsService.createMongooseOptions();
-            jest.spyOn(
-                databaseOptionsService,
-                'createMongooseOptions'
-            ).mockImplementation(() => options);
-
-            expect(databaseOptionsService.createMongooseOptions()).toBe(
-                options
-            );
-        });
     });
 });
