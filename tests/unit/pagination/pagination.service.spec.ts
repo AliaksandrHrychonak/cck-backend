@@ -69,5 +69,14 @@ describe('PaginationService', () => {
 
             expect(paginationService.totalPage(100, 10)).toBe(totalPage);
         });
+
+        it('should be success with max page', async () => {
+            const totalPage = paginationService.totalPage(10000, 10);
+            jest.spyOn(paginationService, 'totalPage').mockImplementation(
+                () => totalPage
+            );
+
+            expect(paginationService.totalPage(10000, 10)).toBe(totalPage);
+        });
     });
 });

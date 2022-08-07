@@ -1,18 +1,20 @@
 {
   "testTimeout": 5000,
-  "rootDir": "..",
+  "rootDir": "../../",
   "modulePaths": [
       "."
   ],
   "testEnvironment": "node",
   "testMatch": [
-      "<rootDir>/test/**/*.spec.ts"
+      "<rootDir>/tests/unit/**/*.spec.ts"
   ],
   "collectCoverage": true,
   "coverageDirectory": "coverage",
   "collectCoverageFrom": [
-      "./src/config/service/**",
-      "./src/pagination/service/**"
+      "./src/common/database/service/**",
+      "./src/common/debugger/service/**",
+      "./src/common/pagination/service/**",
+      "./src/common/helper/service/**"
   ],
   "coverageThreshold": {
     "global": {

@@ -20,7 +20,7 @@
     "lint:test": "eslint --ext .ts,.tsx test/**/*.ts --no-error-on-unmatched-pattern",
     "lint:src": "eslint --ext .ts,.tsx src/**/*.ts --no-error-on-unmatched-pattern",
     "lint:integration": "eslint --ext .ts,.tsx integration/**/*.ts --no-error-on-unmatched-pattern",
-    "test": "yarn test:unit",
+    "test": "jest --config tests/unit/jest.json --passWithNoTests --forceExit --detectOpenHandles",
     "test:unit": "jest --config test/jest.json --detectOpenHandles --passWithNoTests --forceExit",
     "spell": "cspell lint --config cspell.json {src,test}/**/*.ts prod/* readme.md tsconfig*.json package.json nodemon.json .github/* .husky/* --color --gitignore --no-must-find-files --no-summary --no-progress || true",
     "prepare": "husky install",

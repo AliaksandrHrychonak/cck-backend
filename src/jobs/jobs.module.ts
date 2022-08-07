@@ -1,19 +1,21 @@
 import { DynamicModule, Module } from '@nestjs/common';
+import { ScheduleModule } from '@nestjs/schedule';
+
 @Module({})
-export class AppRouterModule {
+export class JobsModule {
     static register(): DynamicModule {
-        if (process.env.APP_HTTP_ON === 'true') {
+        if (process.env.APP_JOB_ON === 'true') {
             return {
-                module: AppRouterModule,
+                module: JobsModule,
                 controllers: [],
                 providers: [],
                 exports: [],
-                imports: [],
+                imports: [ScheduleModule.forRoot()],
             };
         }
 
         return {
-            module: AppRouterModule,
+            module: JobsModule,
             providers: [],
             exports: [],
             controllers: [],
