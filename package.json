@@ -15,6 +15,8 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
+    "rollback": "nestjs-command remove:setting",
+    "migrate": "nestjs-command insert:setting",
     "lint": "eslint --ext .ts,.tsx '{src,test,e2e,integration}/**/*.ts' --no-error-on-unmatched-pattern",
     "lint:fix": "eslint --ext .ts,.tsx '{src,test,e2e,integration}/**/*.ts' --fix --no-error-on-unmatched-pattern",
     "lint:test": "eslint --ext .ts,.tsx test/**/*.ts --no-error-on-unmatched-pattern",

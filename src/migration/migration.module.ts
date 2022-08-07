@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { CommandModule } from 'nestjs-command';
 import { CommonModule } from 'src/common/common.module';
+import { SettingSeed } from './seeds/setting.seed';
 
 
 @Module({
@@ -9,7 +10,7 @@ import { CommonModule } from 'src/common/common.module';
       CommandModule,
     ],
     providers: [
-      // Seeds imports
+      SettingSeed
     ],
     exports: [],
 })
