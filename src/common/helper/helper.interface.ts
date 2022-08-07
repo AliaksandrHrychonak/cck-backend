@@ -19,15 +19,6 @@ export interface IHelperStringRandomOptions {
   prefix?: string;
 }
 
-export interface IHelperGeoCurrent {
-  latitude: number;
-  longitude: number;
-}
-
-export interface IHelperGeoRules extends IHelperGeoCurrent {
-  radiusInMeters: number;
-}
-
 export interface IHelperDateOptions {
   timezone?: string;
 }

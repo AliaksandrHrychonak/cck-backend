@@ -14,7 +14,8 @@
       "./src/common/database/service/**",
       "./src/common/debugger/service/**",
       "./src/common/pagination/service/**",
-      "./src/common/helper/service/**"
+      "./src/common/helper/service/**",
+      "./src/common/setting/services/**"
   ],
   "coverageThreshold": {
     "global": {

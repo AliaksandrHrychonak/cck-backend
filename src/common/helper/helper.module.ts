@@ -4,7 +4,6 @@ import { JwtModule } from '@nestjs/jwt';
 import { HelperArrayService } from './service/helper.array.service';
 import { HelperDateService } from './service/helper.date.service';
 import { HelperEncryptionService } from './service/helper.encryption.service';
-import { HelperGeoService } from './service/helper.geo.service';
 import { HelperHashService } from './service/helper.hash.service';
 import { HelperNumberService } from './service/helper.number.service';
 import { HelperService } from './service/helper.service';
@@ -18,7 +17,6 @@ import { HelperStringService } from './service/helper.string.service';
         HelperNumberService,
         HelperDateService,
         HelperArrayService,
-        HelperGeoService,
         HelperStringService,
         HelperHashService,
         HelperEncryptionService
@@ -28,7 +26,6 @@ import { HelperStringService } from './service/helper.string.service';
         HelperNumberService,
         HelperDateService,
         HelperArrayService,
-        HelperGeoService,
         HelperStringService,
         HelperHashService,
         HelperEncryptionService

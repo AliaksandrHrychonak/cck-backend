@@ -11,6 +11,7 @@ import { DatabaseOptionsModule } from './database/database.module';
 import { PaginationModule } from './pagination/pagination.module';
 import { HelperModule } from './helper/helper.module';
 import { RequestModule } from './request/request.module';
+import { SettingModule } from './setting/setting.module';
 
 @Module({
   controllers: [],
@@ -39,7 +40,8 @@ import { RequestModule } from './request/request.module';
       DebuggerModule,
       PaginationModule,
       HelperModule,
-      RequestModule
+      RequestModule,
+      SettingModule,
     ],
 })
 export class CommonModule {}
