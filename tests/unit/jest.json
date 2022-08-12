@@ -1,36 +1,38 @@
 {
-  "testTimeout": 5000,
-  "rootDir": "../../",
-  "modulePaths": [
-      "."
-  ],
-  "testEnvironment": "node",
-  "testMatch": [
-      "<rootDir>/tests/unit/**/*.spec.ts"
-  ],
-  "collectCoverage": true,
-  "coverageDirectory": "coverage",
-  "collectCoverageFrom": [
-      "./src/common/database/service/**",
-      "./src/common/debugger/service/**",
-      "./src/common/pagination/service/**",
-      "./src/common/helper/service/**",
-      "./src/common/setting/services/**"
-  ],
-  "coverageThreshold": {
-    "global": {
-      "branches": 100,
-      "functions": 100,
-      "lines": 100,
-      "statements": 100
+    "testTimeout": 5000,
+    "rootDir": "../../",
+    "modulePaths": [
+        "."
+    ],
+    "testEnvironment": "node",
+    "testMatch": [
+        "<rootDir>/tests/unit/**/*.spec.ts"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+        "./src/common/database/service/**",
+        "./src/common/debugger/service/**",
+        "./src/common/logger/service/**",
+        "./src/common/message/service/**",
+        "./src/common/pagination/service/**",
+        "./src/common/setting/service/**",
+        "./src/common/helper/service/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "moduleFileExtensions": [
+        "js", 
+        "ts", 
+        "json"
+    ],
+    "transform": {
+        "^.+\\.(t|j)s$": "ts-jest"
     }
-  },
-  "moduleFileExtensions": [
-      "js", 
-      "ts", 
-      "json"
-  ],
-  "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-  }
 }

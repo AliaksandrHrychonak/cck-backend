@@ -1,12 +1,6 @@
 import { Request } from 'express';
 import { IResult } from 'ua-parser-js';
-
-// HARDCODE
-interface IAuthApiPayload  {
-  _id: string;
-  key: string;
-  name: string;
-}
+import { IAuthApiPayload } from '../auth/auth.interface';
 
 export interface IRequestApp extends Request {
     id?: string;
@@ -14,8 +8,10 @@ export interface IRequestApp extends Request {
     timestamp: number;
     customLang: string[];
     apiKey?: IAuthApiPayload;
-    apiVersion?: number;
+    version: string;
+    repoVersion: string;
     userAgent?: IResult;
+
     user?: Record<string, any>;
     __class: string;
     __function: string;

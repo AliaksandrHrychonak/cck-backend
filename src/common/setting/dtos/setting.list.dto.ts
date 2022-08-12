@@ -1,4 +1,4 @@
-import { PaginationListAbstract } from 'src/common/pagination/pagination.abstract';
+import { PaginationListAbstract } from 'src/common/pagination/abstracts/pagination.abstract';
 import {
     PaginationAvailableSearch,
     PaginationAvailableSort,
@@ -6,7 +6,7 @@ import {
     PaginationPerPage,
     PaginationSearch,
     PaginationSort,
-} from 'src/common/pagination/pagination.decorator';
+} from 'src/common/pagination/decorators/pagination.decorator';
 import { IPaginationSort } from 'src/common/pagination/pagination.interface';
 import {
     SETTING_DEFAULT_AVAILABLE_SEARCH,
@@ -14,7 +14,7 @@ import {
     SETTING_DEFAULT_PAGE,
     SETTING_DEFAULT_PER_PAGE,
     SETTING_DEFAULT_SORT,
-} from '../setting.constant';
+} from '../constants/setting.list.constant';
 
 export class SettingListDto implements PaginationListAbstract {
     @PaginationSearch(SETTING_DEFAULT_AVAILABLE_SEARCH)

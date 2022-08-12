@@ -1,7 +1,6 @@
 import { Injectable, mixin, PipeTransform, Type } from '@nestjs/common';
 import { HelperDateService } from 'src/common/helper/service/helper.date.service';
 
-
 export function RequestAddDatePipe(days: number): Type<PipeTransform> {
     @Injectable()
     class MixinRequestAddDatePipe implements PipeTransform {

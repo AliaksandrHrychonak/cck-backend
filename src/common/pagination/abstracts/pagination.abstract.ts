@@ -1,4 +1,4 @@
-import { IPaginationSort } from './pagination.interface';
+import { IPaginationSort } from '../pagination.interface';
 
 export abstract class PaginationListAbstract {
     abstract search?: Record<string, any>;

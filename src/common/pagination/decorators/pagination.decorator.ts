@@ -15,19 +15,19 @@ import { RequestAddDatePipe } from 'src/common/request/pipes/request.add-date.pi
 import { MinGreaterThan } from 'src/common/request/validations/request.min-greater-than.validation';
 import { Skip } from 'src/common/request/validations/request.skip.validation';
 import {
-    ENUM_PAGINATION_AVAILABLE_SORT_TYPE,
     PAGINATION_AVAILABLE_SORT,
     PAGINATION_MAX_PAGE,
     PAGINATION_MAX_PER_PAGE,
     PAGINATION_PAGE,
     PAGINATION_PER_PAGE,
     PAGINATION_SORT,
-} from './pagination.constant';
+} from '../constants/pagination.constant';
+import { ENUM_PAGINATION_AVAILABLE_SORT_TYPE } from '../constants/pagination.enum.constant';
 import {
     IPaginationFilterDateOptions,
     IPaginationFilterOptions,
     IPaginationFilterStringOptions,
-} from './pagination.interface';
+} from '../pagination.interface';
 
 export function PaginationSearch(availableSearch: string[]): any {
     return applyDecorators(

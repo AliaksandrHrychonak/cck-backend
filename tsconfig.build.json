@@ -3,10 +3,8 @@
   "exclude": [
     "node_modules", 
     "dist", 
-    "test", 
-    "e2e", 
+    "tests",
     "prod",
-    "integration"
   ],
   "include": [
     "src"

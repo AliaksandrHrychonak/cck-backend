@@ -1,0 +1,13 @@
+export const ERROR_META_CLASS_KEY = 'ErrorMetaClassKey';
+export const ERROR_META_FUNCTION_KEY = 'ErrorMetaFunctionKey';
+
+export enum ERROR_TYPE {
+    DEFAULT = 'DEFAULT',
+    IMPORT = 'IMPORT',
+}
+
+export enum ENUM_ERROR_STATUS_CODE_ERROR {
+  ERROR_UNKNOWN = 5990,
+  ERROR_SERVICE_UNAVAILABLE = 5991,
+  ERROR_REQUEST_TIMEOUT = 5992,
+}

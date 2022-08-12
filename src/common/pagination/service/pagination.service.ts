@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import {
     PAGINATION_MAX_PAGE,
     PAGINATION_MAX_PER_PAGE,
-} from '../pagination.constant';
+} from '../constants/pagination.constant';
 
 @Injectable()
 export class PaginationService {

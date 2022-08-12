@@ -21,8 +21,6 @@
   "include": [
     "src",
     "tests",
-    "e2e",
-    "integration"
   ],
   "exclude": [
     "node_modules",

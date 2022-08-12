@@ -6,7 +6,6 @@ import { RoutesEnumModule } from './routes/routes.enum.module';
 import { RoutesModule } from './routes/routes.module';
 import { RoutesPublicModule } from './routes/routes.public.module';
 import { RoutesTestModule } from './routes/routes.test.module';
-
 @Module({})
 export class RouterModule {
     static register(): DynamicModule {
