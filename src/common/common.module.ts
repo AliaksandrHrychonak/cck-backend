@@ -18,6 +18,7 @@ import { LoggerModule } from './logger/logger.module';
 import { ResponseModule } from './response/response.module';
 import { MiddlewareModule } from './middleware/middleware.module';
 import { AuthModule } from './auth/auth.module';
+import { AwsModule } from './aws/aws.module';
 
 @Module({
   controllers: [],
@@ -53,7 +54,7 @@ import { AuthModule } from './auth/auth.module';
         RequestModule,
         MiddlewareModule,
         AuthModule,
-        SettingModule,
+        SettingModule
     ],
 })
 export class CommonModule {}
