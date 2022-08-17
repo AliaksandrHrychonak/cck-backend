@@ -1,5 +1,5 @@
 {
-  "list": "List Setting Success.",
+  "list": "Запрос на получение списка настроек успешно завершён.",
   "get": "Get Setting Success.",
   "getByName": "Get Setting by name Success.",
   "update": "Update Succeed",

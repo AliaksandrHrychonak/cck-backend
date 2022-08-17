@@ -39,7 +39,7 @@ async function bootstrap() {
     await app.listen(port, host);
     logger.log(`*****************DATA-APP*****************`);
     logger.log(`App Mode is ${env}`, 'NestApplication');
-    logger.log(`App Versioning is ${versioning}`, 'NestApplication');
+    logger.log(`App Versioning is ${versioning}, version is ${versioningPrefix}${version}`, 'NestApplication');
     logger.log(`App Timezone is ${tz}`, 'NestApplication');
     logger.log(
         `Database running on ${configService.get<string>(

@@ -1,4 +1,5 @@
 import { Controller, Get, VERSION_NEUTRAL } from '@nestjs/common';
+import { AuthExcludeApiKey } from 'src/common/auth/decorators/auth.api-key.decorator';
 
 import { RequestExcludeTimestamp } from 'src/common/request/decorators/request.decorator';
 import { Response } from 'src/common/response/decorators/response.decorator';
@@ -13,7 +14,7 @@ export class MessageEnumController {
     constructor(private readonly messageEnumService: MessageEnumService) {}
 
     @Response('message.languages')
-// API KEY GUARD
+    @AuthExcludeApiKey()
     @RequestExcludeTimestamp()
     @Get('/languages')
     async languages(): Promise<IResponse> {
