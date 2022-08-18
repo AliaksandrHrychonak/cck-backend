@@ -6,6 +6,8 @@ import { AwsModule } from "src/common/aws/aws.module";
 import { SettingController } from "src/common/setting/controllers/setting.controller";
 import { HealthController } from "src/health/controllers/health.controller";
 import { HealthModule } from "src/health/health.module";
+import { PermissionModule } from "src/modules/permission/permission.module";
+import { RoleModule } from "src/modules/role/role.module";
 @Module({
     controllers: [
         SettingController,
@@ -18,7 +20,9 @@ import { HealthModule } from "src/health/health.module";
         HealthModule,
         TerminusModule,
         HttpModule,
-        AuthModule
+        AuthModule,
+        PermissionModule,
+        RoleModule
     ],
 })
 export class RoutesModule {}

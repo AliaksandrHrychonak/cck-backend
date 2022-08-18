@@ -13,7 +13,7 @@ import { MessageEnumService } from '../service/message.enum.service';
 export class MessageEnumController {
     constructor(private readonly messageEnumService: MessageEnumService) {}
 
-    @Response('message.languages')
+    @Response('message.enum.languages')
     @AuthExcludeApiKey()
     @RequestExcludeTimestamp()
     @Get('/languages')
